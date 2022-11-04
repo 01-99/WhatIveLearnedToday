@@ -1,0 +1,42 @@
+:root {
+    --flashAnimation: flash 1s steps(10) 1;
+}
+
+.flash {
+    -webkit-animation-name: flash;
+    animation-name: flash;
+
+    -webkit-animation: var(--flashAnimation);
+    -moz-animation: var(--flashAnimation);
+    -ms-animation: var(--flashAnimation);
+    -o-animation: var(--flashAnimation);
+    animation: var(--flashAnimation);
+}
+
+@-webkit-keyframes flash {
+
+    from,
+    50%,
+    to {
+        opacity: 1;
+    }
+
+    25%,
+    75% {
+        opacity: 0;
+    }
+}
+
+@keyframes flash {
+
+    from,
+    50%,
+    to {
+        opacity: 1;
+    }
+
+    25%,
+    75% {
+        opacity: 0;
+    }
+}
