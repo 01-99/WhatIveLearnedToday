@@ -13,6 +13,14 @@
 - png as favicon
 
 
+## ipynb / Jupiter Notebook
+
+- polyglot notebook (.net interactive)
+- mermaid
+    - gantt diagram
+    - sequence diagram
+
+
 ## Typescript
 
 - hello world
