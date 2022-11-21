@@ -12,6 +12,13 @@
 
 - png as favicon
 
+## identityserver / duende
+
+- ids
+- api
+- adminui
+- client
+
 
 ## ipynb / Jupiter Notebook
 

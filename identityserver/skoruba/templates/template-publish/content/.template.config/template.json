@@ -1,0 +1,148 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Jan Skoruba",
+  "classifications": [
+    "Web",
+    "Duende IdentityServer",
+    "Admin"
+  ],
+  "name": "Skoruba Duende.IdentityServer Admin",
+  "identity": "Skoruba.Duende.IdentityServer.Admin",
+  "groupIdentity": "Skoruba.Duende.IdentityServer.Admin",
+  "shortName": "skoruba.duende.isadmin",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "SkorubaDuende.IdentityServerAdmin",
+  "preferNameDirectory": true,
+  "symbols": {
+    "title": {
+      "type": "parameter",
+      "defaultValue": "Skoruba Duende IdentityServer Admin",
+      "replaces": "Skoruba Duende IdentityServer Admin",
+      "isRequired": true,
+      "description": "The title and footer of the Admin UI"
+    },
+    "adminpassword": {
+      "type": "parameter",
+      "defaultValue": "Pa$$word123",
+      "replaces": "Pa$$word123",
+      "isRequired": true,
+      "description": "The admin password, that is used to first login (default is Pa$$word123)."
+    },
+    "adminemail": {
+      "type": "parameter",
+      "defaultValue": "admin@skoruba.com",
+      "replaces": "admin@skoruba.com",
+      "isRequired": true,
+      "description": "The admin email."
+    },
+    "adminrole": {
+      "type": "parameter",
+      "defaultValue": "SkorubaIdentityAdminAdministrator",
+      "replaces": "SkorubaIdentityAdminAdministrator",
+      "isRequired": true,
+      "description": "The name of admin role, that is used to authorize the administration (for example: MyAdminRole)."
+    },
+    "adminclientid": {
+      "type": "parameter",
+      "defaultValue": "skoruba_identity_admin",
+      "replaces": "skoruba_identity_admin",
+      "isRequired": true,
+      "description": "The name of client, that is used in the Duende IdentityServer"
+    },
+    "adminclientsecret": {
+      "type": "parameter",
+      "defaultValue": "skoruba_admin_client_secret",
+      "replaces": "skoruba_admin_client_secret",
+      "isRequired": true,
+      "description": "The value of client secret, that is used in the Duende IdentityServer"
+    },
+    "dockersupport": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false",
+      "isRequired": true,
+      "description": "Add docker support for Admin UI"
+    }
+  },
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "condition": "(!dockersupport)",
+          "exclude": [
+            "shared/**",
+            "docker-compose.dcproj",
+            ".dockerignore",
+            "docker-compose.yml",
+            "docker-compose.override.yml",
+            "docker-compose.vs.debug.yml",
+            "docker-compose.vs.release.yml",
+            "src/SkorubaDuende.IdentityServerAdmin.Admin/Dockerfile",
+            "src/SkorubaDuende.IdentityServerAdmin.Admin.Api/Dockerfile",
+            "src/SkorubaDuende.IdentityServerAdmin.STS.Identity/Dockerfile",
+            "SkorubaDuende.IdentityServerAdmin.AdminUI.sln"            
+          ]
+        },
+        {
+          "condition": "(dockersupport)",
+          "exclude": [
+            "SkorubaDuende.IdentityServerAdmin.Admin.sln"
+          ]
+        }
+      ]
+    }
+  ],
+  "primaryOutputs": [
+    {
+      "path": "src/SkorubaDuende.IdentityServerAdmin.Admin/SkorubaDuende.IdentityServerAdmin.Admin.csproj"
+    },
+    {
+      "path": "src/SkorubaDuende.IdentityServerAdmin.STS.Identity/SkorubaDuende.IdentityServerAdmin.STS.Identity.csproj"
+    },
+    {
+      "path": "src/SkorubaDuende.IdentityServerAdmin.Admin.Api/SkorubaDuende.IdentityServerAdmin.Admin.Api.csproj"
+    },
+    {
+      "path": "src/SkorubaDuende.IdentityServerAdmin.Admin.EntityFramework.Shared/SkorubaDuende.IdentityServerAdmin.Admin.EntityFramework.Shared.csproj"
+    },
+    {
+      "path": "src/SkorubaDuende.IdentityServerAdmin.Admin.EntityFramework.MySql/SkorubaDuende.IdentityServerAdmin.Admin.EntityFramework.MySql.csproj"
+    },
+    {
+      "path": "src/SkorubaDuende.IdentityServerAdmin.Admin.EntityFramework.PostgreSQL/SkorubaDuende.IdentityServerAdmin.Admin.EntityFramework.PostgreSQL.csproj"
+    },
+    {
+      "path": "src/SkorubaDuende.IdentityServerAdmin.Admin.EntityFramework.SqlServer/SkorubaDuende.IdentityServerAdmin.Admin.EntityFramework.SqlServer.csproj"
+    },
+    {
+      "path": "src/SkorubaDuende.IdentityServerAdmin.Shared/SkorubaDuende.IdentityServerAdmin.Shared.csproj"
+    }
+  ],
+  "postActions": [
+    {
+      "actionId": "D396686C-DE0E-4DE6-906D-291CD29FC5DE",
+      "args": {
+        "primaryOutputIndexes": "0;1;2;3;4;5;6;7"
+      },
+      "continueOnError": false,
+      "manualInstructions": [
+        {
+          "text": "Add projects to solution."
+        }
+      ]
+    },
+    {
+      "description": "Restore NuGet packages required by this project.",
+      "manualInstructions": [
+        {
+          "text": "Run 'dotnet restore'"
+        }
+      ],
+      "actionId": "210D431B-A78B-4D2F-B762-4ED3E3EA9025",
+      "continueOnError": true
+    }
+  ]
+}
