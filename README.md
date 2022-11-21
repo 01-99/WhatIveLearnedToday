@@ -10,5 +10,11 @@
 
 ## Html
 
-- favicon
+- png as favicon
+
+
+## Typescript
+
+- hello world
+- classes
 
