@@ -3,6 +3,8 @@
 ## C++
 
 - hello world (Extension ms-vscode.cpptools-extension-pack)
+- create a file with text
+- read text from file
 
 ## CSS
 
