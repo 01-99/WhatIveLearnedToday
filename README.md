@@ -28,8 +28,15 @@
 
 - polyglot notebook (.net interactive)
 - mermaid
+    - class
+    - er diagram
     - gantt diagram
+    - graph / flow
+    - mindmap (doesnt' work atm with polyglot notebook)
+    - pie chart
     - sequence diagram
+    - state    
+    - user journey
 
 
 ## Typescript
