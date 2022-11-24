@@ -6,6 +6,10 @@
 - create a file with text
 - read text from file
 
+## CSharp
+
+- IsDigit (+ Benchmark)
+
 ## CSS
 
 - Animations
