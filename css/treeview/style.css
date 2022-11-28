@@ -11,6 +11,7 @@ h1 {
     display: block;
     position: relative;
     padding-left: calc(2 * var(--spacing) - var(--radius) - 2px);
+    padding-top: 5px;
 }
 
 .tree ul {
