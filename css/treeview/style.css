@@ -67,7 +67,7 @@ h1 {
     width: calc(2 * var(--radius));
     height: calc(2 * var(--radius));
     border-radius: 50%;
-    background: #ddd;
+    background: #696;
 }
 
 .tree summary::before {
