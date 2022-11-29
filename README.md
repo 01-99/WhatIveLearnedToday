@@ -14,6 +14,7 @@
 
 - Animations
 - Center Div (flex, grid)
+- Images > mix-blend-mode
 - Treeview
 
 ## Chrome
