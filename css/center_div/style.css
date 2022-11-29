@@ -1,0 +1,33 @@
+html, body {
+    height: 100%;
+}
+
+/*rule: positioning of items should always be done by the parent  */
+
+.parent {
+    height: 100%;
+}
+
+.child {
+    width: 100px;
+    height: 100px;
+    background-color: #feb139;
+
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid1 {
+    display: grid;
+    place-items: center;
+}
+
+.grid2 {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
