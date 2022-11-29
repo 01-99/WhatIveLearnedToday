@@ -45,9 +45,17 @@
     - state    
     - user journey
 
+## Javascript
+
+- module.exports
+- node
+- unit test (simple without dependency)
+
 
 ## Typescript
 
-- hello world
 - classes
+- hello world
+- password strength
+
 
