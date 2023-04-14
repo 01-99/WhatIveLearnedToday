@@ -46,6 +46,7 @@
     - sequence diagram
     - state    
     - user journey
+    - mermaid git
 
 ## Javascript
 
@@ -53,6 +54,9 @@
 - node
 - unit test (simple without dependency)
 
+## Powershell
+
+- Get Files from x
 
 ## Typescript
 
